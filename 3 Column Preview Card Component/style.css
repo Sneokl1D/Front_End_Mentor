@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+body {
+    font-size: 15px;
+    background-color: hsl(0, 0%, 95%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 12px;
+    margin: 2rem;
+    overflow: hidden;
+}
+
+.column {
+    padding: 40px;
+}
+
+.column h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+    font-size: 30px;
+}
+
+.column p {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.6;
+}
+
+.column a { /* to make the 'a' tag work for 'margin-top' (it's inline tag) we need to put 'display:inline-block' */
+    text-decoration: none;
+    background-color: hsl(0, 0%, 95%);
+    padding: 13px 27px;
+    border-radius: 26px;
+    margin-top: 60px;
+    display: inline-block;
+    border: 2px solid hsl(0, 0%, 95%);
+    transition: all .4s ease-in-out;
+}
+
+.column-1 {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.column-2 {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.column-3 {
+    background-color:hsl(179, 100%, 13%);
+}
+
+.column-1 a {
+    border-color: hsl(31, 77%, 52%);
+    color: hsl(31, 77%, 52%);
+}
+
+.column-2 a {
+    border-color: hsl(184, 100%, 22%);
+    color: hsl(184, 100%, 22%);
+}
+
+.column-3 a {
+    border-color: hsl(179, 100%, 13%);
+    color: hsl(179, 100%, 13%);
+}
+
+.column a:hover {
+    color: hsl(0, 0%, 95%);
+    border-color: hsl(0, 0%, 95%);
+    background: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .wrapper {
+        margin: 2rem .5rem;
+    }
+}
